@@ -9,24 +9,24 @@
 ## Requisitos da Aplicação
 ### Requisitos Minímos
 
-*Fazer um sistema de registo e login
-*Pesquisa de livros
-*Menu de dados do utilizador com acesso a alterá-los 
-*Histórico do utilizador
-*Realizar a requisição de um livro
-*Livros destaque na front page 
+* Fazer um sistema de registo e login
+* Pesquisa de livros
+* Menu de dados do utilizador com acesso a alterá-los 
+* Histórico do utilizador
+* Realizar a requisição de um livro
+* Livros destaque na front page 
 
 
 ### Requisitos Avançados
 
-#Utilizador Normal
-*Entrega de livros
-*Menu com as categorias disponíveis
+# Utilizador Normal
+* Entrega de livros
+* Menu com as categorias disponíveis
 
-#Administrador 
-*Inserção, alteração e remoção de livros
-*Inserção, alteração e remoção de utilizador
-*Pesquisa de dados de cada utilizador
+# Administrador 
+* Inserção, alteração e remoção de livros
+* Inserção, alteração e remoção de utilizador
+* Pesquisa de dados de cada utilizador
 
 
 
