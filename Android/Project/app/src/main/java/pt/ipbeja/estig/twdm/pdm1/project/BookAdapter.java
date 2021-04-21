@@ -42,7 +42,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         TextView textViewDesc = holder.getTextViewDesc();
         textViewDesc.setText(book.getDesc());
         ImageView imageView = holder.getImageViewCover();
-
+        Glide.with(this.context).load(book.getCover()).into(imageView);
     }
 
     @Override
