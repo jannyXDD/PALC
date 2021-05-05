@@ -36,13 +36,22 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
-        Book book = this.bookList.get(position);
-        TextView textViewName = holder.getTextViewName();
-        textViewName.setText(book.getName());
-        TextView textViewDesc = holder.getTextViewDesc();
-        textViewDesc.setText(book.getDesc());
-        ImageView imageView = holder.getImageViewCover();
-        Glide.with(this.context).load(book.getCover()).into(imageView);
+        Book country = this.bookList.get(position);
+        holder.getTextViewName().setText(country.getName());
+        // ImageView carregada através da biblioteca Glide
+        Glide.with(this.context).load(country.getCover()).into(holder.getImageViewCover());
+        holder.getParentLayout().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Sempre que clicar no parent layout, este código é executado
+                Log.i("RecyclerViewAdapter", String.format("Clicked on: %s (position %d)", country.getName(), position));
+//                Intent intent = new Intent(RecyclerViewAdapter.this.context, DetailsActivity.class);
+//                intent.putExtra(DetailsActivity.KEY_COUNTRYPOSITION, position);
+//                RecyclerViewAdapter.this.context.startActivity(intent);
+
+                DetailsActivity.startActivity(BookAdapter.this.context, position);
+            }
+        });
     }
 
     @Override
@@ -52,7 +61,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
 
     public class BookViewHolder extends RecyclerView.ViewHolder{
-
+        private final View parentLayout;
         private ImageView imageViewCover;
         private TextView textViewName;
         private TextView textViewDesc;
@@ -62,6 +71,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             this.imageViewCover = itemView.findViewById(R.id.imageView);
             this.textViewName = itemView.findViewById(R.id.bookName);
             this.textViewDesc = itemView.findViewById(R.id.bookDesc);
+            this.parentLayout = itemView.findViewById(R.id.parentLayout);
         }
 
         public ImageView getImageViewCover() {
@@ -75,5 +85,8 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         public TextView getTextViewDesc() {
             return textViewDesc;
         }
+
+        public View getParentLayout() { return parentLayout; }
+
     }
 }
