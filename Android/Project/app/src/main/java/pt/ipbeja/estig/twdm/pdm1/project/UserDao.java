@@ -16,6 +16,9 @@ public interface UserDao {
     @Query("SELECT * FROM User WHERE id = :id")
     User getById(long id);
 
+    @Query("SELECT * FROM User WHERE email = :email")
+    User getByEmail(String email);
+
     @Insert
     void add(User user);
 
