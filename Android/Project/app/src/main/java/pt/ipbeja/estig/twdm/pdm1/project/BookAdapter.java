@@ -36,20 +36,16 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
-        Book country = this.bookList.get(position);
-        holder.getTextViewName().setText(country.getName());
-        // ImageView carregada através da biblioteca Glide
-        Glide.with(this.context).load(country.getCover()).into(holder.getImageViewCover());
+        Book book = this.bookList.get(position);
+        holder.getTextViewName().setText(book.getName());
+        Glide.with(this.context).load(book.getCover()).into(holder.getImageViewCover());
+        holder.getTextViewDesc().setText(book.getAuthor());
         holder.getParentLayout().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Sempre que clicar no parent layout, este código é executado
-                Log.i("RecyclerViewAdapter", String.format("Clicked on: %s (position %d)", country.getName(), position));
-//                Intent intent = new Intent(RecyclerViewAdapter.this.context, DetailsActivity.class);
-//                intent.putExtra(DetailsActivity.KEY_COUNTRYPOSITION, position);
-//                RecyclerViewAdapter.this.context.startActivity(intent);
+                Log.i("RecyclerViewAdapter", String.format("Clicked on: %s (position %d)", book.getName(), position));
 
-                DetailsActivity.startActivity(BookAdapter.this.context, position);
+                DetailsActivity.startActivity(BookAdapter.this.context, book.getId());
             }
         });
     }
@@ -86,7 +82,9 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             return textViewDesc;
         }
 
-        public View getParentLayout() { return parentLayout; }
+        public View getParentLayout() {
+            return parentLayout;
+        }
 
     }
 }

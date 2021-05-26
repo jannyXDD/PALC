@@ -13,19 +13,20 @@ import com.bumptech.glide.Glide;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    public static void startActivity(Context context, long id){
+        Intent intent = new Intent(context, DetailsActivity.class);
+        intent.putExtra(KEY_BOOKPOSITION, id);
+        context.startActivity(intent);
+    }
+
     private static final String KEY_BOOKPOSITION = "BOOKPOSITION";
     private static final String TAG = "DetailsActivity";
 
     private ImageView imageViewCover;
     private TextView textViewName;
     private TextView textViewDesc;
+    private TextView textViewAuthor;
     private Book book;
-
-    public static void startActivity(Context context, int position){
-        Intent intent = new Intent(context, DetailsActivity.class);
-        intent.putExtra(KEY_BOOKPOSITION, position);
-        context.startActivity(intent);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,18 +36,21 @@ public class DetailsActivity extends AppCompatActivity {
         this.imageViewCover = findViewById(R.id.imageView);
         this.textViewName = findViewById(R.id.textViewName);
         this.textViewDesc = findViewById(R.id.textViewDescription);
+        this.textViewAuthor = findViewById(R.id.textViewAuthor);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
-            int position = bundle.getInt(KEY_BOOKPOSITION, -1);
-            if (position == -1){
-                Log.e(TAG, "Invalid position found!");
+            long id = bundle.getLong(KEY_BOOKPOSITION, -1);
+            if (id == -1){
+                Log.e(TAG, "Invalid id found!");
                 finish();
             }
-            this.book = DataSource.getBook(position);
+            this.book = DataSource.getBook(this, id);
 
             Glide.with(this).load(book.getCover()).into(this.imageViewCover);
             this.textViewName.setText(book.getName());
+            this.textViewDesc.setText(book.getDesc());
+            this.textViewAuthor.setText(book.getAuthor());
         } else{
             Log.e(TAG, "No position specified!");
             finish();
