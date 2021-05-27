@@ -12,8 +12,7 @@ public class User {
     private String password;
     //private String schedule;
 
-    public User(long id, String name, String email, String password) {
-        this.id = id;
+    public User(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
