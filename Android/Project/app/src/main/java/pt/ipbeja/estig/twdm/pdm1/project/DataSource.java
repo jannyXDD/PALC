@@ -24,11 +24,11 @@ public class DataSource {
     }
 
     public static List<User> getUserList(Context context) {
-        return UserDataBase.getInstance(context).getUserDao().getAll();
+        return AppDataBase.getInstance(context).getUserDao().getAll();
 
     }
 
     public static User getUser(Context context, long id) {
-        return UserDataBase.getInstance(context).getUserDao().getById(id);
+        return AppDataBase.getInstance(context).getUserDao().getById(id);
     }
 }

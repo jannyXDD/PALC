@@ -22,6 +22,9 @@ public interface UserDao {
     @Query("SELECT * FROM User WHERE email = :email and password = :password")
     User checkLogin(String email, String password);
 
+    @Query("SELECT * FROM User WHERE email = :email")
+    User checkRegister(String email);
+
     @Insert
     void add(User user);
 

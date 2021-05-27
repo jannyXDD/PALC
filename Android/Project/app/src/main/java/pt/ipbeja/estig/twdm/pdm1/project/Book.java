@@ -2,7 +2,8 @@ package pt.ipbeja.estig.twdm.pdm1.project;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
+//falta o ano do livro
+//falta tambem o numero de requisiçoes
 @Entity
 public class Book {
     @PrimaryKey(autoGenerate = true)
