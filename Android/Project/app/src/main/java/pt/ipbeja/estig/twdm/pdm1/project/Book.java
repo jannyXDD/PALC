@@ -12,6 +12,9 @@ public class Book {
     private String cover;
     private String category;
     private String author;
+    //private int year;
+    //private int request;
+
 
     public Book(long id, String name, String description, String cover, String category, String author) {
         this.id = id;
@@ -20,6 +23,7 @@ public class Book {
         this.cover = cover;
         this.category = category;
         this.author = author;
+
     }
 
     public void setId(long id) {
