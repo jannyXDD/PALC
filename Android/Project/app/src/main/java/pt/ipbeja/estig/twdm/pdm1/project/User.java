@@ -1,6 +1,7 @@
 package pt.ipbeja.estig.twdm.pdm1.project;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity
@@ -16,6 +17,7 @@ public class User {
         this.email = email;
         this.password = password;
     }
+
 
     public long getId() {
         return id;

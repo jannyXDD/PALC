@@ -37,9 +37,9 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
     @Override
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
         Book book = this.bookList.get(position);
-        holder.getTextViewName().setText(book.getName());
+        //holder.getTextViewName().setText(book.getName());
         Glide.with(this.context).load(book.getCover()).into(holder.getImageViewCover());
-        holder.getTextViewDesc().setText(book.getAuthor());
+        //holder.getTextViewDesc().setText(book.getAuthor());
         holder.getParentLayout().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,8 +65,8 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
             this.imageViewCover = itemView.findViewById(R.id.imageView);
-            this.textViewName = itemView.findViewById(R.id.bookName);
-            this.textViewDesc = itemView.findViewById(R.id.bookDesc);
+            //this.textViewName = itemView.findViewById(R.id.bookName);
+           // this.textViewDesc = itemView.findViewById(R.id.bookDesc);
             this.parentLayout = itemView.findViewById(R.id.parentLayout);
         }
 
