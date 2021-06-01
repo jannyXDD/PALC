@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         BookAdapter adapter = new BookAdapter(this, DataSource.getBookList(this));
         recyclerView.setAdapter(adapter);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(layoutManager);
 
     }
 
