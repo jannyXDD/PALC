@@ -8,9 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,14 +20,21 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);}
 
-    }
+//    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+//        RecyclerView recyclerView2 = findViewById(R.id.recyclerView);
+//        BookAdapter adapter2 = new BookAdapter(this, DataSource.getBookList(this));
+//        recyclerView.setAdapter(adapter);
+//        LinearLayoutManager layoutManager2 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setLayoutManager(layoutManager);
+//
+//    }
 
-    public void loginPage(View view) {
+    public void goToLogin(View view) {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
-
 
 }
