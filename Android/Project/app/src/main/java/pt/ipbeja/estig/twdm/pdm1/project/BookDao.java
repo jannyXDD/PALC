@@ -23,7 +23,7 @@ public interface BookDao {
     @Query("SELECT * FROM Book WHERE category = 'Artes'")
     List<Book> getByArt();
 
-    @Query("SELECT * FROM Book WHERE category = 'Comedy'")
+    @Query("SELECT * FROM Book WHERE category = 'Comédia'")
     List<Book> getByComedy();
 
     @Query("SELECT * FROM Book WHERE category = 'Romance'")
