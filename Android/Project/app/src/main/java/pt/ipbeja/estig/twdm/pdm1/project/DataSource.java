@@ -16,7 +16,10 @@ public class DataSource {
 
     public static List<Book> getBookList(Context context) {
         return AppDataBase.getInstance(context).getBookDao().getAll();
+    }
 
+    public static List<Book> getBookListArt(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getByArt();
     }
 
     public static Book getBook(Context context, long id) {
