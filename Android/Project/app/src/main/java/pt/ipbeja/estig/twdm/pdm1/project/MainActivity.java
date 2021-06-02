@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView2.setLayoutManager(new LinearLayoutManager(this));
         recyclerView2.setLayoutManager(layoutManager2);
 
+
   }
 
     public void goToLogin(View view) {
