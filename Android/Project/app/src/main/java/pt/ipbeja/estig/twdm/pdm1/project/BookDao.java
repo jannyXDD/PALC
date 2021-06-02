@@ -17,6 +17,9 @@ public interface BookDao {
     @Query("SELECT * FROM Book WHERE id = :id")
     Book getById(long id);
 
+    @Query("SELECT * FROM Book WHERE category = :id")
+    Book getByCategory(String id);
+
     @Insert
     void add(Book book);
 

@@ -13,17 +13,19 @@ public class Book {
     private String cover;
     private String category;
     private String author;
-    //private int year;
-    //private int request;
+    private String year;
+    private int reqNumber;
 
 
-    public Book(long id, String name, String description, String cover, String category, String author) {
+    public Book(long id, String name, String description, String cover, String category, String author, String year, int reqNumber) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.cover = cover;
         this.category = category;
         this.author = author;
+        this.year = year;
+        this.reqNumber = reqNumber;
 
     }
 
@@ -57,5 +59,13 @@ public class Book {
 
     public String getAuthor() {
         return author;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public int getReqNumber() {
+        return reqNumber;
     }
 }
