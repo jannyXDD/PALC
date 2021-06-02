@@ -17,9 +17,17 @@ public interface BookDao {
     @Query("SELECT * FROM Book WHERE id = :id")
     Book getById(long id);
 
+    @Query("SELECT * FROM Book ORDER BY reqNumber")
+    List<Book> getByPopular();
+
     @Query("SELECT * FROM Book WHERE category = 'Artes'")
     List<Book> getByArt();
 
+    @Query("SELECT * FROM Book WHERE category = 'Comedy'")
+    List<Book> getByComedy();
+
+    @Query("SELECT * FROM Book WHERE category = 'Romance'")
+    List<Book> getByRomantic();
 
     @Insert
     void add(Book book);
