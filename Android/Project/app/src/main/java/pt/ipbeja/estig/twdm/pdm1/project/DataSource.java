@@ -22,6 +22,18 @@ public class DataSource {
         return AppDataBase.getInstance(context).getBookDao().getByArt();
     }
 
+    public static List<Book> getBookListRomantic(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getByRomantic();
+    }
+
+    public static List<Book> getBookListPopular(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getByPopular();
+    }
+
+    public static List<Book> getBookListComedy(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getByComedy();
+    }
+
     public static Book getBook(Context context, long id) {
         return AppDataBase.getInstance(context).getBookDao().getById(id);
     }

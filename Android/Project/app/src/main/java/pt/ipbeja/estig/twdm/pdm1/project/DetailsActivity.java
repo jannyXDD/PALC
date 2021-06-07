@@ -26,6 +26,7 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView textViewName;
     private TextView textViewDesc;
     private TextView textViewAuthor;
+    private TextView textViewYear;
     private Book book;
 
     @Override
@@ -37,6 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
         this.textViewName = findViewById(R.id.textViewName);
         this.textViewDesc = findViewById(R.id.textViewDescription);
         this.textViewAuthor = findViewById(R.id.textViewAuthor);
+        this.textViewYear = findViewById(R.id.textView7);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
@@ -51,6 +53,7 @@ public class DetailsActivity extends AppCompatActivity {
             this.textViewName.setText(book.getName());
             this.textViewDesc.setText(book.getDesc());
             this.textViewAuthor.setText(book.getAuthor());
+            this.textViewYear.setText(book.getYear());
         } else{
             Log.e(TAG, "No position specified!");
             finish();
