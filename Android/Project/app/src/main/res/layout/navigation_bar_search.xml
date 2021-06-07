@@ -12,16 +12,16 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:onClick="goToSearch"
             app:srcCompat="@drawable/lupaverde" />
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:onClick="goToCategory"
             app:srcCompat="@drawable/catego" />
@@ -36,16 +36,16 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:onClick="goToSchedule"
             app:srcCompat="@drawable/relog" />
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:onClick="goToHistory"
             app:srcCompat="@drawable/livros" />

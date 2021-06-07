@@ -64,4 +64,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void goToSearchActivity(View view) {
+        Intent intent = new Intent(this, Search_Activity.class);
+        startActivity(intent);
+    }
+
+    public void goToCategoryActivity(View view) {
+        Intent intent = new Intent(this, Categories.class);
+        startActivity(intent);
+    }
+
+    public void goToMainActivity(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToScheduleActivity(View view) {
+        Intent intent = new Intent(this, ScheduleActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToHistoryActivity(View view) {
+        Intent intent = new Intent(this, Historical.class);
+        startActivity(intent);
+    }
 }
