@@ -7,11 +7,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import pt.ipbeja.estig.twdm.pdm1.project.adapters.BookAdapter;
+import pt.ipbeja.estig.twdm.pdm1.project.data.AppDataBase;
 import pt.ipbeja.estig.twdm.pdm1.project.data.DataSource;
+import pt.ipbeja.estig.twdm.pdm1.project.data.UserDao;
+import pt.ipbeja.estig.twdm.pdm1.project.models.User;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewArt();
         recyclerViewComedy();
 
-
     }
+
+
+
     public void recyclerViewPopular(){
           RecyclerView recyclerView = findViewById(R.id.recyclerView);
           BookAdapter adapter = new BookAdapter(this, DataSource.getBookListPopular(this));

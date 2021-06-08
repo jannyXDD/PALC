@@ -15,8 +15,8 @@ import pt.ipbeja.estig.twdm.pdm1.project.models.User;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextView textViewEmail;
-    private TextView textViewPassword;
+    public TextView textViewEmail;
+    public TextView textViewPassword;
     private Button button;
 
 
@@ -25,8 +25,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        textViewEmail = findViewById(R.id.editTextEmail);
-        textViewPassword = findViewById(R.id.editTextPassword);
+        textViewEmail = findViewById(R.id.editTextEmailRegister);
+        textViewPassword = findViewById(R.id.editTextPasswordRegister);
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +66,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void registerPage(View view) {
+
+    public void goToRegisterActivity(View view) {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }

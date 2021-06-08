@@ -28,7 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
         textViewName = findViewById(R.id.editTextNameRegister);
         textViewEmail = findViewById(R.id.editTextEmailRegister);
         textViewPassword = findViewById(R.id.editTextPasswordRegister);
-        button = findViewById(R.id.button2);
+        button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,5 +68,10 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void goToLogin(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 }
