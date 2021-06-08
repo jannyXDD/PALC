@@ -7,15 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import pt.ipbeja.estig.twdm.pdm1.project.adapters.BookAdapter;
-import pt.ipbeja.estig.twdm.pdm1.project.data.AppDataBase;
 import pt.ipbeja.estig.twdm.pdm1.project.data.DataSource;
-import pt.ipbeja.estig.twdm.pdm1.project.data.UserDao;
-import pt.ipbeja.estig.twdm.pdm1.project.models.User;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -78,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void goToSearchActivity(View view) {
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, FavouriteActivity.class);
         startActivity(intent);
     }
 

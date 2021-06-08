@@ -11,14 +11,19 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private boolean favourite;
 
 
     public User(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
+        this.favourite = favourite;
     }
 
+    public boolean isFavourite() { return favourite; }
+
+    public void setFavourite(boolean favourite) { this.favourite = favourite; }
 
     public long getId() {
         return id;

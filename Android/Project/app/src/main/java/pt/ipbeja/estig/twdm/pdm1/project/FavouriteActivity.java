@@ -1,21 +1,20 @@
 package pt.ipbeja.estig.twdm.pdm1.project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class SearchActivity extends AppCompatActivity {
+import java.util.List;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_);
-    }
+public class FavouriteActivity extends AppCompatActivity {
+
 
     public void goToSearchActivity(View view) {
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, FavouriteActivity.class);
         startActivity(intent);
     }
 
