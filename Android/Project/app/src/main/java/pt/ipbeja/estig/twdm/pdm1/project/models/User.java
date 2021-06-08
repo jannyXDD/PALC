@@ -1,4 +1,4 @@
-package pt.ipbeja.estig.twdm.pdm1.project;
+package pt.ipbeja.estig.twdm.pdm1.project.models;
 
 import androidx.room.Entity;
 import androidx.room.Ignore;

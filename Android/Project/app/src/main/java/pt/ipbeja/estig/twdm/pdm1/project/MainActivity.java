@@ -8,6 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import pt.ipbeja.estig.twdm.pdm1.project.adapters.BookAdapter;
+import pt.ipbeja.estig.twdm.pdm1.project.data.DataSource;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -59,18 +62,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToLogin(View view) {
-        Intent intent = new Intent(this, Login.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
 
     public void goToSearchActivity(View view) {
-        Intent intent = new Intent(this, Search_Activity.class);
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
 
     public void goToCategoryActivity(View view) {
-        Intent intent = new Intent(this, Categories.class);
+        Intent intent = new Intent(this, CategoriesActivity.class);
         startActivity(intent);
     }
 
@@ -85,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToHistoryActivity(View view) {
-        Intent intent = new Intent(this, Historical.class);
+        Intent intent = new Intent(this, HistoricalActivity.class);
         startActivity(intent);
     }
 }

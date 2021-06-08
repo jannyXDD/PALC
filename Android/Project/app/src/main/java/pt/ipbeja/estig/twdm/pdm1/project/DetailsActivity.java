@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import pt.ipbeja.estig.twdm.pdm1.project.data.DataSource;
+import pt.ipbeja.estig.twdm.pdm1.project.models.Book;
+
 public class DetailsActivity extends AppCompatActivity {
 
     public static void startActivity(Context context, long id){

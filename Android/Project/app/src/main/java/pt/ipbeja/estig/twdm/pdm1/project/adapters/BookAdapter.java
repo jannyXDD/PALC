@@ -1,4 +1,4 @@
-package pt.ipbeja.estig.twdm.pdm1.project;
+package pt.ipbeja.estig.twdm.pdm1.project.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -14,6 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+
+import pt.ipbeja.estig.twdm.pdm1.project.DetailsActivity;
+import pt.ipbeja.estig.twdm.pdm1.project.R;
+import pt.ipbeja.estig.twdm.pdm1.project.models.Book;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder>{
     private static final String TAG = "BookAdapter";

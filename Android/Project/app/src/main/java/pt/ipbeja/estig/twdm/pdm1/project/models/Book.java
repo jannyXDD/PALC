@@ -1,4 +1,4 @@
-package pt.ipbeja.estig.twdm.pdm1.project;
+package pt.ipbeja.estig.twdm.pdm1.project.models;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -15,6 +15,7 @@ public class Book {
     private String author;
     private String year;
     private int reqNumber;
+
 
 
     public Book(long id, String name, String description, String cover, String category, String author, String year, int reqNumber) {

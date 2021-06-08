@@ -1,4 +1,4 @@
-package pt.ipbeja.estig.twdm.pdm1.project;
+package pt.ipbeja.estig.twdm.pdm1.project.data;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -7,6 +7,8 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import java.util.List;
+
+import pt.ipbeja.estig.twdm.pdm1.project.models.User;
 
 @Dao
 public interface UserDao {

@@ -9,29 +9,31 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Register extends AppCompatActivity {
+import pt.ipbeja.estig.twdm.pdm1.project.data.AppDataBase;
+import pt.ipbeja.estig.twdm.pdm1.project.data.UserDao;
+import pt.ipbeja.estig.twdm.pdm1.project.models.User;
 
-    private TextView textViewName;
+public class LoginActivity extends AppCompatActivity {
+
     private TextView textViewEmail;
     private TextView textViewPassword;
     private Button button;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_login);
 
-        textViewName = findViewById(R.id.editTextNameRegister);
-        textViewEmail = findViewById(R.id.editTextEmailRegister);
-        textViewPassword = findViewById(R.id.editTextPasswordRegister);
-        button = findViewById(R.id.button2);
+        textViewEmail = findViewById(R.id.editTextEmail);
+        textViewPassword = findViewById(R.id.editTextPassword);
+        button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userName = textViewName.getText().toString();
                 String userEmail = textViewEmail.getText().toString();
                 String userPassword = textViewPassword.getText().toString();
-                if (userName.isEmpty() || userEmail.isEmpty() || userPassword.isEmpty()){
+                if (userEmail.isEmpty() || userPassword.isEmpty()){
                     Toast.makeText(getApplicationContext(),"Preencha todos os campos!", Toast.LENGTH_SHORT).show();
                 } else {
 
@@ -40,29 +42,32 @@ public class Register extends AppCompatActivity {
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
-                            User user = userDao.checkRegister(userEmail);
+                            User user = userDao.checkLogin(userEmail, userPassword);
                             if (user == null){
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        User newUser = new User(userName, userEmail, userPassword);
-                                        AppDataBase.getInstance(Register.this).getUserDao().add(newUser);
-                                        Toast.makeText(getApplicationContext(),"Registo Concluído", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(),"Dados Inválidos!", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                             } else {
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        Toast.makeText(getApplicationContext(),"Já existe um utilizador com esse email", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(),"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
                                     }
                                 });
-                                startActivity(new Intent(Register.this, MainActivity.class));
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             }
                         }
                     }).start();
                 }
             }
         });
+    }
+
+    public void registerPage(View view) {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 }

@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Search_Activity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,12 +15,12 @@ public class Search_Activity extends AppCompatActivity {
     }
 
     public void goToSearchActivity(View view) {
-        Intent intent = new Intent(this, Search_Activity.class);
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
 
     public void goToCategoryActivity(View view) {
-        Intent intent = new Intent(this, Categories.class);
+        Intent intent = new Intent(this, CategoriesActivity.class);
         startActivity(intent);
     }
 
@@ -35,7 +35,7 @@ public class Search_Activity extends AppCompatActivity {
     }
 
     public void goToHistoryActivity(View view) {
-        Intent intent = new Intent(this, Historical.class);
+        Intent intent = new Intent(this, HistoricalActivity.class);
         startActivity(intent);
     }
 }

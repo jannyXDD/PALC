@@ -1,9 +1,11 @@
-package pt.ipbeja.estig.twdm.pdm1.project;
+package pt.ipbeja.estig.twdm.pdm1.project.data;
 
 import android.content.Context;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import pt.ipbeja.estig.twdm.pdm1.project.models.Book;
+import pt.ipbeja.estig.twdm.pdm1.project.models.User;
 
 public class DataSource {
 
