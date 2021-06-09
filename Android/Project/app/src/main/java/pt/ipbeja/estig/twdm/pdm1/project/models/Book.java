@@ -17,7 +17,6 @@ public class Book {
     private int reqNumber;
 
 
-
     public Book(long id, String name, String description, String cover, String category, String author, String year, int reqNumber) {
         this.id = id;
         this.name = name;
