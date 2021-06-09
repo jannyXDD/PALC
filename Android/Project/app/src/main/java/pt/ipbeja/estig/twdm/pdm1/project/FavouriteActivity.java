@@ -8,9 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import java.util.List;
-
-import pt.ipbeja.estig.twdm.pdm1.project.adapters.BookAdapter;
 import pt.ipbeja.estig.twdm.pdm1.project.adapters.FavouriteAdapter;
 import pt.ipbeja.estig.twdm.pdm1.project.data.DataSource;
 
@@ -20,14 +17,14 @@ public class FavouriteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourite);
-        RecyclerView recyclerView = findViewById(R.id.recyclerView3);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView110);
         FavouriteAdapter adapter = new FavouriteAdapter(this, DataSource.getBookList(this));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(layoutManager);
 
     }
-
-
 
 
     public void goToSearchActivity(View view) {

@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -66,12 +67,14 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.Favo
         private ImageView imageViewCover;
         private TextView textViewName;
         private TextView textViewDesc;
+        private CheckBox checkBox;
 
         public FavouriteViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.imageViewCover = itemView.findViewById(R.id.imageView);
-            //this.textViewName = itemView.findViewById(R.id.bookName);
+            this.imageViewCover = itemView.findViewById(R.id.imageViewCover);
+            this.textViewName = itemView.findViewById(R.id.textView9);
             // this.textViewDesc = itemView.findViewById(R.id.bookDesc);
+            this.checkBox = itemView.findViewById(R.id.checkBoxFavourite);
             this.parentLayout = itemView.findViewById(R.id.parentLayout);
         }
 

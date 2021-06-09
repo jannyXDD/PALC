@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void recyclerViewPopular(){
           RecyclerView recyclerView = findViewById(R.id.recyclerView);
           BookAdapter adapter = new BookAdapter(this, DataSource.getBookListPopular(this));
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void recyclerViewComedy(){
-        RecyclerView recyclerView4 = findViewById(R.id.recyclerView3);
+        RecyclerView recyclerView4 = findViewById(R.id.recyclerView110);
         BookAdapter adapter4 = new BookAdapter(this, DataSource.getBookListComedy(this));
         recyclerView4.setAdapter(adapter4);
         LinearLayoutManager layoutManager4 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);

@@ -37,12 +37,10 @@
             android:layout_marginRight="32dp"
             android:clickable="true"
             android:onClick="goToLogin"
-            app:backgroundTint="#039BE5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_persongreen"
-            app:tint=""/>
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -161,7 +159,7 @@
                 android:layout_height="150dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView3"
+                    android:id="@+id/recyclerView110"
                     android:layout_width="match_parent"
                     android:layout_height="130dp"
                     android:layout_marginTop="16dp"
