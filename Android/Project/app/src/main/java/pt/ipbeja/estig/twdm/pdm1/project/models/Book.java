@@ -15,9 +15,11 @@ public class Book {
     private String author;
     private String year;
     private int reqNumber;
+    private boolean isFavourite;
+    private boolean wasReq;
 
 
-    public Book(long id, String name, String description, String cover, String category, String author, String year, int reqNumber) {
+    public Book(long id, String name, String description, String cover, String category, String author, String year, int reqNumber, boolean isFavourite, boolean wasReq) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -26,7 +28,25 @@ public class Book {
         this.author = author;
         this.year = year;
         this.reqNumber = reqNumber;
+        this.isFavourite = isFavourite;
+        this.wasReq = wasReq;
 
+    }
+
+    public boolean isWasReq() {
+        return wasReq;
+    }
+
+    public void setWasReq(boolean wasReq) {
+        this.wasReq = wasReq;
+    }
+
+    public boolean isIsFavourite() {
+        return isFavourite;
+    }
+
+    public void setIsFavourite(boolean isFavourite) {
+        this.isFavourite = isFavourite;
     }
 
     public void setId(long id) {

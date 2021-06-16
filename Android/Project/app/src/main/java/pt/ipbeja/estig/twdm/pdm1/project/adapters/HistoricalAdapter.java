@@ -20,27 +20,27 @@ import pt.ipbeja.estig.twdm.pdm1.project.DetailsActivity;
 import pt.ipbeja.estig.twdm.pdm1.project.R;
 import pt.ipbeja.estig.twdm.pdm1.project.models.Book;
 
-public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.FavouriteViewHolder>{
-    private static final String TAG = "FavouriteAdapter";
+public class HistoricalAdapter extends RecyclerView.Adapter<HistoricalAdapter.HistoricalViewHolder>{
+    private static final String TAG = "HistoricalAdapter";
 
     private List<Book> bookList;
     private Context context;
 
-    public FavouriteAdapter(Context context, List<Book> bookList){
+    public HistoricalAdapter(Context context, List<Book> bookList){
         this.bookList = bookList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public FavouriteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public HistoricalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.i(TAG, "onCreateViewHolder");
-        View view = LayoutInflater.from(this.context).inflate(R.layout.list_favourite, parent, false);
-        return new FavouriteViewHolder(view);
+        View view = LayoutInflater.from(this.context).inflate(R.layout.list_historical, parent, false);
+        return new HistoricalViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FavouriteViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull HistoricalViewHolder holder, int position) {
         Book book = this.bookList.get(position);
         holder.getTextViewName().setText(book.getName());
         Glide.with(this.context).load(book.getCover()).into(holder.getImageViewCover());
@@ -50,7 +50,7 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.Favo
             public void onClick(View v) {
                 Log.i("RecyclerViewAdapter", String.format("Clicked on: %s (position %d)", book.getName(), position));
 
-                DetailsActivity.startActivity(FavouriteAdapter.this.context, book.getId());
+                DetailsActivity.startActivity(HistoricalAdapter.this.context, book.getId());
             }
         });
     }
@@ -61,17 +61,17 @@ public class FavouriteAdapter extends RecyclerView.Adapter<FavouriteAdapter.Favo
     }
 
 
-    public static class FavouriteViewHolder extends RecyclerView.ViewHolder{
+    public static class HistoricalViewHolder extends RecyclerView.ViewHolder{
 
         private final View parentLayout;
         private ImageView imageViewCover;
         private TextView textViewName;
         private TextView textViewDesc;
 
-        public FavouriteViewHolder(@NonNull View itemView) {
+        public HistoricalViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.imageViewCover = itemView.findViewById(R.id.imageViewCover);
-            this.textViewName = itemView.findViewById(R.id.textView9);
+            this.imageViewCover = itemView.findViewById(R.id.imageView3);
+            this.textViewName = itemView.findViewById(R.id.textView16);
             // this.textViewDesc = itemView.findViewById(R.id.bookDesc);
             this.parentLayout = itemView;
         }

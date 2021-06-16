@@ -9,6 +9,7 @@ import androidx.room.Update;
 import java.util.List;
 
 import pt.ipbeja.estig.twdm.pdm1.project.models.Book;
+import pt.ipbeja.estig.twdm.pdm1.project.models.User;
 
 @Dao
 public interface BookDao {
@@ -19,7 +20,7 @@ public interface BookDao {
     @Query("SELECT * FROM Book WHERE id = :id")
     Book getById(long id);
 
-    @Query("SELECT * FROM Book ORDER BY reqNumber")
+    @Query("SELECT * FROM Book ORDER BY reqNumber DESC")
     List<Book> getByPopular();
 
     @Query("SELECT * FROM Book WHERE category = 'Artes'")
@@ -30,6 +31,15 @@ public interface BookDao {
 
     @Query("SELECT * FROM Book WHERE category = 'Romance'")
     List<Book> getByRomantic();
+
+    @Query("SELECT * FROM Book WHERE isFavourite = 1")
+    List<Book> getByFavourite();
+
+    @Query("SELECT * FROM Book WHERE wasReq = 1")
+    List<Book> getByReq();
+
+    @Query("SELECT * FROM Book WHERE id = :bookID")
+    Book checkReq(String bookID);
 
     @Insert
     void add(Book book);

@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToScheduleActivity(View view) {
-        Intent intent = new Intent(this, ScheduleActivity.class);
+        Intent intent = new Intent(this, FavouriteActivity.class);
         startActivity(intent);
     }
 

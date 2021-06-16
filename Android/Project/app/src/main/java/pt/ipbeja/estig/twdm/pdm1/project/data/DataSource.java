@@ -40,6 +40,14 @@ public class DataSource {
         return AppDataBase.getInstance(context).getBookDao().getById(id);
     }
 
+    public static List<Book> getBookFavourite(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getByFavourite();
+    }
+
+    public static List<Book> getBookReq(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getByReq();
+    }
+
     public static List<User> getUserList(Context context) {
         return AppDataBase.getInstance(context).getUserDao().getAll();
 
