@@ -22,12 +22,12 @@
 
 
 ## Lista de Tarefas
-1. Fazer um sistema de registo e login - [x] -
-2. Main Page com livros em destaque - [x] -
-3. Página com categorias de livros - [x] -
-4. Pesquisa de livros - [x] -
-5. Mostrar os favoritos de um utilizador - [x] -
-6. Mostrar o histórico de requisições de um utilizador - [x] -
+1. Fazer um sistema de registo e login - [x] 
+2. Main Page com livros em destaque - [x] 
+3. Página com categorias de livros - [x] 
+4. Pesquisa de livros - [x] 
+5. Mostrar os favoritos de um utilizador - [x] 
+6. Mostrar o histórico de requisições de um utilizador - [x] 
 
 ## Links do Projeto
 [GitHub](https://github.com/)
