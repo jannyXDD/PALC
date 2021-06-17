@@ -18,11 +18,12 @@ public class CategorySports extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_sport);
         RecyclerView recyclerView3 = findViewById(R.id.recyclerView15);
-        CategoryAdapter adapter3 = new CategoryAdapter(this, DataSource.getBookListArt(this));
+        CategoryAdapter adapter3 = new CategoryAdapter(this, DataSource.getBookListSports(this));
         recyclerView3.setAdapter(adapter3);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView3.setLayoutManager(new LinearLayoutManager(this));
         recyclerView3.setLayoutManager(layoutManager3);
+
     }
 
     public void goToSearchActivity(View view) {

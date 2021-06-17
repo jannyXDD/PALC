@@ -18,7 +18,7 @@ public class CategoryDicionary extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_dicionary);
         RecyclerView recyclerView3 = findViewById(R.id.recyclerView12);
-        CategoryAdapter adapter3 = new CategoryAdapter(this, DataSource.getBookListArt(this));
+        CategoryAdapter adapter3 = new CategoryAdapter(this, DataSource.getBookListDictionary(this));
         recyclerView3.setAdapter(adapter3);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView3.setLayoutManager(new LinearLayoutManager(this));

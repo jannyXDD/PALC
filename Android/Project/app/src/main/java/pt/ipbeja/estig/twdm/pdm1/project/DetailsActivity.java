@@ -41,6 +41,7 @@ public class DetailsActivity extends AppCompatActivity {
     private Button button;
     private Book book;
     private Button button2;
+    private Button button3;
     private CheckBox checkBox;
 
     @Override
@@ -56,6 +57,7 @@ public class DetailsActivity extends AppCompatActivity {
         this.button = findViewById(R.id.button3);
         this.button2 = findViewById(R.id.button10);
         this.checkBox = findViewById(R.id.checkBox);
+        this.button3 = findViewById(R.id.button4);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
@@ -114,6 +116,29 @@ public class DetailsActivity extends AppCompatActivity {
                             public void run() {
                                 if(checkBox.isChecked()){
                                     book.setIsFavourite(true);
+                                    bookDataBase.getInstance(DetailsActivity.this).getBookDao().update(book);
+                                }
+                            }
+                        });
+                        startActivity(new Intent(DetailsActivity.this, MainActivity.class));
+                    }
+                }).start();
+            }
+        });
+
+        this.button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppDataBase bookDataBase = AppDataBase.getInstance(getApplicationContext());
+                BookDao bookDao = bookDataBase.getBookDao();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if(checkBox.isChecked()){
+                                    book.setIsFavourite(false);
                                     bookDataBase.getInstance(DetailsActivity.this).getBookDao().update(book);
                                 }
                             }

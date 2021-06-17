@@ -7,11 +7,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
 
 import pt.ipbeja.estig.twdm.pdm1.project.adapters.FavouriteAdapter;
+import pt.ipbeja.estig.twdm.pdm1.project.data.AppDataBase;
+import pt.ipbeja.estig.twdm.pdm1.project.data.BookDao;
 import pt.ipbeja.estig.twdm.pdm1.project.data.DataSource;
+import pt.ipbeja.estig.twdm.pdm1.project.models.Book;
 
 public class FavouriteActivity extends AppCompatActivity {
+
+    private Button button2;
+    private CheckBox checkBox;
+    private Book book;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +32,8 @@ public class FavouriteActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setLayoutManager(layoutManager);
+
+
 
     }
 

@@ -136,6 +136,81 @@ public abstract class AppDataBase extends RoomDatabase {
                                     "'2021', " +
                                     "4, '0', '0')");
 
+                            db.execSQL("INSERT INTO Book (name, description, cover, category, author, year, reqNumber, isFavourite, wasReq) VALUES ('Ver para Crer', " +
+                                    "'Aurélio Pereira fez a formação como jogador de futebol no Sporting Clube de Portugal, mas não chegou a sénior. Foi já com uma carreira de sucesso na área comercial que chegou a treinador, nas horas vagas, para ajudar o irmão. Treinou o Fofó e uma equipa de bancários que não eram bancários no campeonato do INATEL, até chegar novamente ao Sporting. E, a partir daí, fez história.\n" +
+                                    "\n" +
+                                    "Para ele, o jogador sempre foi o elo mais forte. Aurélio Pereira é um defensor ferrenho do futebol humanizado, não mecanizado. Aprendeu-o na escola da vida, onde as propinas são mais caras. Transportando atletas para os jogos no seu Mini cor de laranja, dando dormida a outros na sua própria casa, para poderem ir aos jogos, aproveitando fins de semana românticos para ir espreitar peladinhas, Aurélio Pereira tornou-se o maior caça-talentos do futebol mundial. Foram 62 os internacionais pela principal seleção portuguesa que lhe passaram pelas mãos. Nomes como Paulo Futre, Luís Figo ou Cristiano Ronaldo encabeçam uma lista que inclui dezenas de outros craques, nomeadamente Adrien, Beto, Cadete, Carlos Xavier, Dani, Gelson, Hugo Viana, João Mário, João Moutinho, Nani, Peixe, Quaresma, Rui Patrício ou William.\n" +
+                                    "\n" +
+                                    "Neste livro, está a montagem da primeira rede nacional de olheiros, estão as histórias de 50 anos dedicados ao Sporting e das descobertas mais proveitosas para o clube, para a seleção e para todos os adeptos de futebol.', " +
+                                    "'https://img.wook.pt/images/ver-para-crer-rui-miguel-tovar/MXwyNDU3ODE5MXwyMDY5MDQ5MXwxNjIxMzc4ODAwMDAwfHdlYnA=/502x', " +
+                                    "'Desporto', " +
+                                    "'Rui Miguel Tovar e Aurélio Pereira', " +
+                                    "'2021', " +
+                                    "5, '0', '0')");
+
+                            db.execSQL("INSERT INTO Book (name, description, cover, category, author, year, reqNumber, isFavourite, wasReq) VALUES ('Uefa Euro 2020 - O Livro Oficial', " +
+                                    "'A 16.ª edição do Campeonato Europeu de Futebol da UEFA terá lugar entre 11 de junho e 11 de julho de 2021, em 12 cidades espalhadas um pouco por toda a Europa, desde Dublin a Bacu e de São Petersburgo a Roma.\n" +
+                                    "O UEFA EURO 2020: O Livro Oficial explora todo o torneio, incluindo uma análise pormenorizada dos países em jogo e as suas hipóteses de êxito; as estrelas que deverão estar nas primeiras páginas dos jornais; e ainda a recordação dos momentos mágicos de mais de 60 anos de competições gloriosas.\n" +
+                                    "Repleto de factos e de estatísticas e com uma tabela para preencher à medida que o torneio decorre, o UEFA EURO 2020: O Livro Oficial é o guia perfeito para acompanhar a maior festa do futebol europeu.', " +
+                                    "'https://img.wook.pt/images/uefa-euro-2020-o-livro-oficial/MXwyNDczNzcxNXwyMDg5OTQ3N3wxNjE5NDc4MDAwMDAwfHdlYnA=/502x', " +
+                                    "'Desporto', " +
+                                    "'Jubileu', " +
+                                    "'2021', " +
+                                    "9, '0', '0')");
+
+                            db.execSQL("INSERT INTO Book (name, description, cover, category, author, year, reqNumber, isFavourite, wasReq) VALUES ('Primeiro Dicionário Ilustrado de Inglês', " +
+                                    "'Mais de 1000 palavras para aprenderes inglês de forma divertida!\n" +
+                                    "\n" +
+                                    "De A, como Actor, a Z, como Zoo, passando por Christmas, school ou tea time, vais descobrir não só a língua inglesa mas também o dia a dia dos ingleses.\n" +
+                                    "\n" +
+                                    "Este dicionário apresenta 25 páginas duplas sobre as tradições e a cultura dos britânicos e ainda algumas curiosidades.\n" +
+                                    "\n" +
+                                    "Graças às explicações simples, aos numerosos exemplos e à utilização das palavras em contexto, aprender inglês vai ser very, very, very easy!\n" +
+                                    "\n" +
+                                    "De acordo com as Metas Curriculares de Inglês para o 1.° Ciclo!', " +
+                                    "'https://img.wook.pt/images/primeiro-dicionario-ilustrado-de-ingles-anne-sophie-le-breton/MXwxODAzOTc1NHwxOTIxMjMyNnwxNTY4MzI5MjAwMDAwfHdlYnA=/502x', " +
+                                    "'Dicionário', " +
+                                    "'Anne-Sophie Le Breton e Lemisse Al-Hafidh ', " +
+                                    "'2021', " +
+                                    "2, '0', '0')");
+
+                            db.execSQL("INSERT INTO Book (name, description, cover, category, author, year, reqNumber, isFavourite, wasReq) VALUES ('Dicionário Básico Ilustrado da Língua Portuguesa (formato pequeno)', " +
+                                    "'Nova edição do Dicionário Básico Ilustrado da Língua Portuguesa¸ totalmente revista e atualizada.\n" +
+                                    "\n" +
+                                    "Disponível em dois formatos, este dicionário foi concebido especialmente para os alunos do 1.º e 2.° Ciclos do Ensino Básico, com uma preocupação didática muito específica, e inclui:\n" +
+                                    "mais de 11 500 entradas com indicação da divisão silábica, marcação da sílaba tónica e pronúncia das palavras estrangeiras;\n" +
+                                    "definições redigidas numa linguagem rigorosa e muito clara;\n" +
+                                    "mais de 350 ilustrações representando as definições e os conceitos apresentados\n" +
+                                    "comentários e notas explicativas sobre dificuldades e particularidades da língua;\n" +
+                                    "anexo com conteúdos gramaticais e conjugações verbais que esclarece as dúvidas gramaticais mais frequentes\n" +
+                                    "Um dicionário fundamental para quem dá os primeiros passos na aprendizagem do português.', " +
+                                    "'https://img.wook.pt/images/dicionario-basico-ilustrado-da-lingua-portuguesa-formato-pequeno/MXwxMjU3NDR8MjA4NDkzNjR8MTYxOTU2NDQwMDAwMHx3ZWJw/502x', " +
+                                    "'Dicionário', " +
+                                    "'Jubileu', " +
+                                    "'2021', " +
+                                    "15, '0', '0')");
+
+                            db.execSQL("INSERT INTO Book (name, description, cover, category, author, year, reqNumber, isFavourite, wasReq) VALUES ('O Monstro das Cores\n" +
+                                    "Caderno para colorir (6ª Edição)', " +
+                                    "'As emoções explicadas às crianças através das cores.\n" +
+                                    "A personagem principal é um monstro que muda de cor consoante o que está a sentir. Ele não percebe porque muda de cor e a sua amiga, a menina, explica-lhe o que significa estar triste, estar alegre, ter medo, estar calmo e sentir raiva.', " +
+                                    "'https://img.wook.pt/images/o-monstro-das-cores-anna-llenas/MXwxNzAwMTc1NXwxMjYyMzk2M3wxNDczODk0MDAwMDAwfHdlYnA=/502x', " +
+                                    "'Criança', " +
+                                    "'Anna Llenas', " +
+                                    "'2021', " +
+                                    "20, '0', '0')");
+
+                            db.execSQL("INSERT INTO Book (name, description, cover, category, author, year, reqNumber, isFavourite, wasReq) VALUES ('1001 Atividades Pré-escolares', " +
+                                    "'Este livro foi elaborado para a criança em idade pré-escolar se divertir enquanto aprende.\n" +
+                                    "\n" +
+                                    "Através de atividades ludopedagógicas, baseadas nas Orientações Curriculares para a Educação Pré-escolar, pretende-se desenvolver as capacidades nas diferentes áreas e domínios, promovendo um harmonioso desenvolvimento infantil.', " +
+                                    "'https://img.wook.pt/images/1001-atividades-pre-escolares/MXwyMTQxNjg0N3wyMDgxMDM4MHwxNjE1MzM0NDAwMDAwfHdlYnA=/502x', " +
+                                    "'Criança', " +
+                                    "'Jubileu', " +
+                                    "'2021', " +
+                                    "22, '0', '0')");
+
+
 
                             db.execSQL("INSERT INTO User (name, email, password) VALUES ('João Costa', '21143@stu.ipbeja.pt', '123')");
                         }

@@ -18,7 +18,7 @@ public class CategoryKids extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_kids);
         RecyclerView recyclerView3 = findViewById(R.id.recyclerView13);
-        CategoryAdapter adapter3 = new CategoryAdapter(this, DataSource.getBookListArt(this));
+        CategoryAdapter adapter3 = new CategoryAdapter(this, DataSource.getBookListKids(this));
         recyclerView3.setAdapter(adapter3);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView3.setLayoutManager(new LinearLayoutManager(this));
