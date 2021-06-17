@@ -26,8 +26,9 @@
 2. Main Page com livros em destaque - [x] 
 3. Página com categorias de livros - [x] 
 4. Pesquisa de livros - [x] 
-5. Mostrar os favoritos de um utilizador - [x] 
-6. Mostrar o histórico de requisições de um utilizador - [x] 
+5. Realizar a requisição de um livro - [x] 
+6. Mostrar os favoritos de um utilizador - [x] 
+7. Mostrar o histórico de requisições de um utilizador - [x] 
 
 ## Links do Projeto
 [GitHub](https://github.com/)
