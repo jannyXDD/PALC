@@ -19,37 +19,37 @@ import pt.ipbeja.estig.twdm.pdm1.project.DetailsActivity;
 import pt.ipbeja.estig.twdm.pdm1.project.R;
 import pt.ipbeja.estig.twdm.pdm1.project.models.Book;
 
-public class CategoryArtAdapter extends RecyclerView.Adapter<CategoryArtAdapter.CategoryArtViewHolder>{
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder>{
     private static final String TAG = "CategoryArtAdapter";
 
     private List<Book> bookList;
     private Context context;
 
-    public CategoryArtAdapter(Context context, List<Book> bookList){
+    public CategoryAdapter(Context context, List<Book> bookList){
         this.bookList = bookList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public CategoryArtViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.i(TAG, "onCreateViewHolder");
         View view = LayoutInflater.from(this.context).inflate(R.layout.list_category_item, parent, false);
-        return new CategoryArtViewHolder(view);
+        return new CategoryViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryArtViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         Book book = this.bookList.get(position);
         holder.getTextViewName().setText(book.getName());
         Glide.with(this.context).load(book.getCover()).into(holder.getImageViewCover());
-        //holder.getTextViewDesc().setText(book.getAuthor());
+        holder.getTextViewAuthor().setText(book.getAuthor());
         holder.getParentLayout().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i("RecyclerViewAdapter", String.format("Clicked on: %s (position %d)", book.getName(), position));
 
-                DetailsActivity.startActivity(CategoryArtAdapter.this.context, book.getId());
+                DetailsActivity.startActivity(CategoryAdapter.this.context, book.getId());
             }
         });
     }
@@ -60,18 +60,18 @@ public class CategoryArtAdapter extends RecyclerView.Adapter<CategoryArtAdapter.
     }
 
 
-    public static class CategoryArtViewHolder extends RecyclerView.ViewHolder{
+    public static class CategoryViewHolder extends RecyclerView.ViewHolder{
 
         private final View parentLayout;
         private ImageView imageViewCover;
         private TextView textViewName;
-        private TextView textViewDesc;
+        private TextView textViewAuthor;
 
-        public CategoryArtViewHolder(@NonNull View itemView) {
+        public CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
             this.imageViewCover = itemView.findViewById(R.id.imageView15);
-            this.textViewName = itemView.findViewById(R.id.textView29);
-            // this.textViewDesc = itemView.findViewById(R.id.bookDesc);
+            this.textViewName = itemView.findViewById(R.id.textView22);
+            this.textViewAuthor = itemView.findViewById(R.id.textView29);
             this.parentLayout = itemView;
         }
 
@@ -83,8 +83,8 @@ public class CategoryArtAdapter extends RecyclerView.Adapter<CategoryArtAdapter.
             return textViewName;
         }
 
-        public TextView getTextViewDesc() {
-            return textViewDesc;
+        public TextView getTextViewAuthor() {
+            return textViewAuthor;
         }
 
         public View getParentLayout() {

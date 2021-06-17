@@ -36,6 +36,19 @@ public class DataSource {
         return AppDataBase.getInstance(context).getBookDao().getByComedy();
     }
 
+    public static List<Book> getBookListSports(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getBySports();
+    }
+
+    public static List<Book> getBookListDictionary(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getByDictionary();
+    }
+
+    public static List<Book> getBookListKids(Context context) {
+        return AppDataBase.getInstance(context).getBookDao().getByKids();
+    }
+
+
     public static Book getBook(Context context, long id) {
         return AppDataBase.getInstance(context).getBookDao().getById(id);
     }

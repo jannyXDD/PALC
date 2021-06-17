@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import pt.ipbeja.estig.twdm.pdm1.project.adapters.CategoryArtAdapter;
+import pt.ipbeja.estig.twdm.pdm1.project.adapters.CategoryAdapter;
 import pt.ipbeja.estig.twdm.pdm1.project.data.DataSource;
 
 public class CategorySports extends AppCompatActivity {
@@ -18,7 +18,7 @@ public class CategorySports extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_sport);
         RecyclerView recyclerView3 = findViewById(R.id.recyclerView15);
-        CategoryArtAdapter adapter3 = new CategoryArtAdapter(this, DataSource.getBookListArt(this));
+        CategoryAdapter adapter3 = new CategoryAdapter(this, DataSource.getBookListArt(this));
         recyclerView3.setAdapter(adapter3);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView3.setLayoutManager(new LinearLayoutManager(this));
