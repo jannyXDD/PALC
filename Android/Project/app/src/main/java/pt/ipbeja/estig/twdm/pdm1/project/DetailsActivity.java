@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +40,8 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView textViewYear;
     private Button button;
     private Book book;
+    private Button button2;
+    private CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,8 @@ public class DetailsActivity extends AppCompatActivity {
         this.textViewAuthor = findViewById(R.id.textViewAuthor);
         this.textViewYear = findViewById(R.id.textView7);
         this.button = findViewById(R.id.button3);
+        this.button2 = findViewById(R.id.button10);
+        this.checkBox = findViewById(R.id.checkBox);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
@@ -66,6 +71,9 @@ public class DetailsActivity extends AppCompatActivity {
             this.textViewDesc.setText(book.getDesc());
             this.textViewAuthor.setText(book.getAuthor());
             this.textViewYear.setText(book.getYear());
+            if(book.isIsFavourite()){
+                this.checkBox.isChecked();
+            }
         } else{
             Log.e(TAG, "No position specified!");
             finish();
@@ -91,6 +99,29 @@ public class DetailsActivity extends AppCompatActivity {
                         }
                     }).start();
                 }
+        });
+
+        this.button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppDataBase bookDataBase = AppDataBase.getInstance(getApplicationContext());
+                BookDao bookDao = bookDataBase.getBookDao();
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if(checkBox.isChecked()){
+                                    book.setIsFavourite(true);
+                                    bookDataBase.getInstance(DetailsActivity.this).getBookDao().update(book);
+                                }
+                            }
+                        });
+                        startActivity(new Intent(DetailsActivity.this, MainActivity.class));
+                    }
+                }).start();
+            }
         });
     }
 }
