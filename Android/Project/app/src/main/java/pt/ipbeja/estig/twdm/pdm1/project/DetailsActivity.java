@@ -124,4 +124,29 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void goToMainActivity(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToFavouriteActivity(View view) {
+        Intent intent = new Intent(this, FavouriteActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToHistoryActivity(View view) {
+        Intent intent = new Intent(this, HistoricalActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToSearchActivity(View view) {
+        Intent intent = new Intent(this, FavouriteActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToCategoryActivity(View view) {
+        Intent intent = new Intent(this, CategoriesActivity.class);
+        startActivity(intent);
+    }
 }

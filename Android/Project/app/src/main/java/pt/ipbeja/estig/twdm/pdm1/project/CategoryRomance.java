@@ -1,50 +1,28 @@
 package pt.ipbeja.estig.twdm.pdm1.project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class CategoriesActivity extends AppCompatActivity {
+import pt.ipbeja.estig.twdm.pdm1.project.adapters.CategoryArtAdapter;
+import pt.ipbeja.estig.twdm.pdm1.project.data.DataSource;
+
+public class CategoryRomance extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_categories);
-    }
-
-
-    public void goToCategoryArt(View view) {
-        Intent intent = new Intent(this, CategoryArt.class);
-        startActivity(intent);
-    }
-
-
-    public void goToCategoryDicionary(View view) {
-        Intent intent = new Intent(this, CategoryDicionary.class);
-        startActivity(intent);
-    }
-
-
-    public void goToCategorySports(View view) {
-        Intent intent = new Intent(this, CategorySports.class);
-        startActivity(intent);
-    }
-
-    public void goToCategoryRomance(View view) {
-        Intent intent = new Intent(this, CategoryRomance.class);
-        startActivity(intent);
-    }
-
-    public void goToCategoryKids(View view) {
-        Intent intent = new Intent(this, CategoryKids.class);
-        startActivity(intent);
-    }
-
-    public void goToCategoryComedy(View view) {
-        Intent intent = new Intent(this, CategoryComedy.class);
-        startActivity(intent);
+        setContentView(R.layout.activity_category_romance);
+        RecyclerView recyclerView3 = findViewById(R.id.recyclerView14);
+        CategoryArtAdapter adapter3 = new CategoryArtAdapter(this, DataSource.getBookListRomantic(this));
+        recyclerView3.setAdapter(adapter3);
+        LinearLayoutManager layoutManager3 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerView3.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView3.setLayoutManager(layoutManager3);
     }
 
     public void goToSearchActivity(View view) {

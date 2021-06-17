@@ -85,13 +85,28 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToScheduleActivity(View view) {
+    public void goToFavouriteActivity(View view) {
         Intent intent = new Intent(this, FavouriteActivity.class);
         startActivity(intent);
     }
 
     public void goToHistoryActivity(View view) {
         Intent intent = new Intent(this, HistoricalActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToCategoryArt(View view) {
+        Intent intent = new Intent(this, CategoryArt.class);
+        startActivity(intent);
+    }
+
+    public void goToCategoryRomance(View view) {
+        Intent intent = new Intent(this, CategoryRomance.class);
+        startActivity(intent);
+    }
+
+    public void goToActivityComedy(View view) {
+        Intent intent = new Intent(this, CategoryComedy.class);
         startActivity(intent);
     }
 }

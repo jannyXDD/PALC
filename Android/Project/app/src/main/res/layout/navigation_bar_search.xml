@@ -15,7 +15,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:onClick="goToSearch"
+            android:onClick="goToSearchActivity"
             app:srcCompat="@drawable/lupaverde" />
 
         <ImageView
@@ -23,7 +23,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:onClick="goToCategory"
+            android:onClick="goToCategoryActivity"
             app:srcCompat="@drawable/catego" />
 
         <ImageView
@@ -31,7 +31,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:onClick="goToMain"
+            android:onClick="goToMainActivity"
             app:srcCompat="@drawable/logog" />
 
         <ImageView
@@ -39,15 +39,15 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:onClick="goToSchedule"
-            app:srcCompat="@drawable/relog" />
+            android:onClick="goToFavouriteActivity"
+            app:srcCompat="@drawable/coracao" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:onClick="goToHistory"
+            android:onClick="goToHistoryActivity"
             app:srcCompat="@drawable/livros" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,6 +17,7 @@ public class Book {
     private int reqNumber;
     private boolean isFavourite;
     private boolean wasReq;
+    //private long date;
 
 
     public Book(long id, String name, String description, String cover, String category, String author, String year, int reqNumber, boolean isFavourite, boolean wasReq) {
