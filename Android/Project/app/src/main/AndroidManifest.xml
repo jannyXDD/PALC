@@ -18,7 +18,13 @@
         <activity android:name=".CategoryKids" />
         <activity android:name=".CategoryDicionary" />
         <activity android:name=".CategoryArt" />
-        <activity android:name=".IntroActivity" />
+        <activity android:name=".IntroActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".ScheduleActivity" />
         <activity android:name=".CategoriesActivity" />
         <activity android:name=".FavouriteActivity" />
@@ -27,11 +33,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".DetailsActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
