@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
-        <activity android:name=".CategoryComedy"></activity>
+        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".CategoryComedy" />
         <activity android:name=".CategorySports" />
         <activity android:name=".CategoryRomance" />
         <activity android:name=".CategoryKids" />

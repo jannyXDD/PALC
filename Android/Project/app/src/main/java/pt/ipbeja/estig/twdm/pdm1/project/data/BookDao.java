@@ -47,6 +47,9 @@ public interface BookDao {
     @Query("SELECT * FROM Book WHERE wasReq = 1")
     List<Book> getByReq();
 
+    @Query("SELECT * FROM Book WHERE name LIKE '%' || :search || '%' OR author LIKE '%' || :search || '%'")
+    List<Book> getBookBySearch(String search);
+
     @Query("SELECT * FROM Book WHERE id = :bookID")
     Book checkReq(String bookID);
 

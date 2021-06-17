@@ -39,7 +39,7 @@ public class FavouriteActivity extends AppCompatActivity {
 
 
     public void goToSearchActivity(View view) {
-        Intent intent = new Intent(this, FavouriteActivity.class);
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
 
