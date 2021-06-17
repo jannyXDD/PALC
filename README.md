@@ -11,12 +11,13 @@
 
 * Fazer um sistema de registo e login
 * Main Page com livros em destaque
+* Realizar a requisição de um livro
+* Marcar um livro como favorito
 * Página com categorias de livros
 
 
 ### Requisitos Avançados
 * Pesquisa de livros
-* Realizar a requisição de um livro
 * Mostrar os favoritos de um utilizador
 * Mostrar o histórico de requisições de um utilizador
 
@@ -25,10 +26,11 @@
 1. Fazer um sistema de registo e login - [x] 
 2. Main Page com livros em destaque - [x] 
 3. Página com categorias de livros - [x] 
-4. Pesquisa de livros - [x] 
-5. Realizar a requisição de um livro - [x] 
-6. Mostrar os favoritos de um utilizador - [x] 
-7. Mostrar o histórico de requisições de um utilizador - [x] 
+4. Marcar um livro como favorito - [x] 
+5. Pesquisa de livros - [x] 
+6. Realizar a requisição de um livro - [x] 
+7. Mostrar os favoritos de um utilizador - [x] 
+8. Mostrar o histórico de requisições de um utilizador - [x] 
 
 ## Links do Projeto
 [GitHub](https://github.com/)
