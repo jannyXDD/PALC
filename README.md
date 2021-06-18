@@ -10,30 +10,27 @@
 ### Requisitos Minímos
 
 * Fazer um sistema de registo e login
-* Pesquisa de livros
-* Menu de dados do utilizador com acesso a alterá-los 
-* Histórico do utilizador
+* Main Page com livros em destaque
 * Realizar a requisição de um livro
-* Livros destaque na front page 
+* Marcar um livro como favorito
+* Página com categorias de livros
 
 
 ### Requisitos Avançados
-
-# Utilizador Normal
-* Entrega de livros
-* Menu com as categorias disponíveis
-
-# Administrador 
-* Inserção, alteração e remoção de livros
-* Inserção, alteração e remoção de utilizador
-* Pesquisa de dados de cada utilizador
-
+* Pesquisa de livros
+* Mostrar os favoritos de um utilizador
+* Mostrar o histórico de requisições de um utilizador
 
 
 ## Lista de Tarefas
-1. Tarefa - [x] -
-2. Tarefa - [x] -
-3. Tarefa - [] -
+1. Fazer um sistema de registo e login - [x] 
+2. Main Page com livros em destaque - [x] 
+3. Página com categorias de livros - [x] 
+4. Marcar um livro como favorito - [x] 
+5. Pesquisa de livros - [x] 
+6. Realizar a requisição de um livro - [x] 
+7. Mostrar os favoritos de um utilizador - [x] 
+8. Mostrar o histórico de requisições de um utilizador - [x] 
 
 ## Links do Projeto
 [GitHub](https://github.com/)
